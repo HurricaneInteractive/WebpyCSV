@@ -1,0 +1,45 @@
+<div class="row justify-content-center" style="margin-top: 20px;">
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <h4 class="card-header">Upload CSV File</h4>
+            <div class="card-body">
+                <form action="/processCSV" method="POST" enctype="multipart/form-data" id="csv-upload" class="mb-0">
+                    <div class="form-group">
+                        <label class="w-100 custom-file">
+                            <input type="file" name="csv_upload" id="csv_upload" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="delimiter">Delimiter</label>
+                        <input type="text" class="form-control" name="delimiter" id="delimiter" placeholder="Delimiter (Default ',')">
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        <button type="submit" class="btn btn-outline-info btn-info mb-0">Upload.</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body">
+                Made by: <a href="https://github.com/HurricaneInteractive" target="_blank" rel="noopener noreferrer">Adro.codes</a>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                Built with: <a href="http://webpy.org/" target="_blank" rel="noopener noreferrer">Web.py</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header align-items-center d-flex justify-content-between">
+                <h5 class="m-0">Upload CSV File</h5>
+                <button id="select" class="m-0 btn btn-primary btn-outline-primary">Select JSON</button>
+            </div>
+            <div class="card-body" id="result" style="max-height: calc(100vh - 160px); overflow-y: auto;">
+
+            </div>
+        </div>
+    </div>
+</div>
